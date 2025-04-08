@@ -39,3 +39,5 @@
 /x64/Debug
 /x64/Debug/MazeBot.tlog
 /x64
+*.ilk
+*.log
