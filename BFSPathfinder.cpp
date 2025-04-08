@@ -36,7 +36,6 @@ void BFSPathfinder::NextSearchStep()
 					m_searchQueue.push((*it));
 					m_visited.push_back((*it));
 					m_prev[*it] = current;
-					//BotRenderer::AddTrace(current->m_id, m_connectedBot->m_color);
 					m_connectedBot->m_pos = current->m_id;
 
 					if ((*it)->m_id == m_end)
@@ -53,12 +52,9 @@ void BFSPathfinder::NextSearchStep()
 							lastParent = lastParentPtr->m_id;
 							std::cout << lastParent.m_x << ";" << lastParent.m_y << std::endl;
 							lastParentPtr = m_prev[lastParentPtr];
-							//BotRenderer::AddTrace(lastParent, sf::Color::Red);
 						}
-						//BotRenderer::AddTrace(m_end, sf::Color::Red);
 					}
 				}
-				//BotRenderer::AddTrace(current->m_id, m_connectedBot->m_color);
 			}
 		}
 	}

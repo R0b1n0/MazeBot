@@ -10,6 +10,7 @@ public:
 	virtual void SetParameters(Vector2Int& start, Vector2Int& end);
 	virtual void NextSearchStep() = 0;
 	virtual const std::vector<Vector2Int*> GetVisitedTiles() = 0;
+	delegateWrapper<std::function<void(int bite, int couille)>> test;
 
 protected:
 	Vector2Int m_start;
@@ -18,3 +19,7 @@ protected:
 	MazeGenerator* m_mazeInfos;
 };
 
+template <class T> class delegateWrapper 
+{
+
+};
