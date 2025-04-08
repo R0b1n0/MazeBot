@@ -41,3 +41,6 @@
 /x64
 *.ilk
 *.log
+*.idb
+*.pdb
+*.ilk
