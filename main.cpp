@@ -49,7 +49,6 @@ int main()
 
 	Bouton* Shuffle = new Bouton(150, 50, *new Vector2Int(0, 0), "Shuffle", font);
 	Shuffle->AddListeners([&gameMan]() {gameMan->GenerateGameParameters(); });
-	//Shuffle->AddListeners([&botRenderer]() {botRenderer->RefreshTrace(); });
 	btnMan->AddBtn(Shuffle);
 
 	Bouton* Start = new Bouton(150, 50, *new Vector2Int(0, 55), "Start", font);
