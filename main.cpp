@@ -26,18 +26,13 @@ int main()
 #pragma endregion
 
 #pragma region Bots
-	MazeBot depthBot("Depth Bot", sf::Color::Blue);
 	MazeBot BfsBot("BFS Bot", sf::Color::Cyan);
-	botRenderer->AddBot(depthBot);
 	botRenderer->AddBot(BfsBot);
 #pragma endregion
 
 #pragma region Algo
 	BFSPathfinder* bfsAlgo = new BFSPathfinder(BfsBot, maze);
 	gameMan->AddPathfinder(bfsAlgo);
-
-	//DepthFirstPathfinder* depthAlgo = new DepthFirstPathfinder(depthBot, maze);
-	//gameMan->AddPathfinder(depthAlgo);
 #pragma endregion
 
 #pragma region UI
