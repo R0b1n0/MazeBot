@@ -1,2 +1,10 @@
-﻿  BFSPathfinder.cpp
+﻿  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\InputListener.h(11,56): warning C4227: anachronisme utilisé : qualificateurs de référence ignorés
+  (compiler le fichier source 'main.cpp')
+  
+C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\InputListener.h(16,2): warning C4091: 'static ' : ignoré à gauche de 'InputListener' quand aucune variable n'est déclarée
+  (compiler le fichier source 'main.cpp')
+  
+  LINK : C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\x64\Debug\MazeBot.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
   MazeBot.vcxproj -> C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\x64\Debug\MazeBot.exe
