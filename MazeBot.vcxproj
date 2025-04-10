@@ -163,6 +163,7 @@
     <ClInclude Include="BotRenderer.h" />
     <ClInclude Include="Bouton.h" />
     <ClInclude Include="BtnManager.h" />
+    <ClInclude Include="DelegateWrapper.h" />
     <ClInclude Include="DepthFirstPathfinder.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="InputListener.h" />
