@@ -41,7 +41,7 @@ void BFSPathfinder::NextSearchStep()
 
 					if ((*it)->m_id == m_end)
 					{
-						std::cout << " Found exit" << std::endl;
+						//std::cout << " Found exit" << std::endl;
 
 						MazeNode* lastParentPtr = (m_prev[m_mazeInfos->GetNode(m_end)]);
 						Vector2Int lastParent;
@@ -53,7 +53,7 @@ void BFSPathfinder::NextSearchStep()
 						{
 							lastParent = lastParentPtr->m_id;
 							solutionPath.push_back(lastParent);
-							std::cout << lastParent.m_x << ";" << lastParent.m_y << std::endl;
+							//std::cout << lastParent.m_x << ";" << lastParent.m_y << std::endl;
 							lastParentPtr = m_prev[lastParentPtr];
 						}
 						OnSolutionFound.Invoke(solutionPath);
