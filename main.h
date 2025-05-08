@@ -9,8 +9,11 @@
 #include "Bouton.h"
 #include "BtnManager.h"
 #include "GameManager.h"
+#include "StatsTracker.h"
 #include "BFSPathfinder.h"
 #include "TraceRenderer.h"
+#include "StatsRenderer.h"
+
 
 
 

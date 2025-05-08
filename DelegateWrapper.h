@@ -25,4 +25,6 @@ public:
 		methods.push_back(method);
 		return *this;
 	}
+
+	//TODO Ajouter une méthode pour unsub, les statics ça mord
 };

@@ -18,6 +18,8 @@ int main()
 	//BotRenderer* botRenderer = new BotRenderer(maze);
 	InputListener* inputs = new InputListener();
 	TraceRenderer* traceRend = new TraceRenderer(maze, sf::Color::Cyan, sf::Color::Magenta);
+	StatsTracker* statsTrack = new StatsTracker();
+	
 
 	drawCall.push_back([&maze](sf::RenderWindow& window) { maze.DrawMaze(window); });
 	drawCall.push_back([&gameMan](sf::RenderWindow& window) { gameMan->DrawStartEnd(window); });
@@ -25,6 +27,7 @@ int main()
 	drawCall.push_back([&traceRend](sf::RenderWindow& window) {traceRend->DrawTrace(window); });
 
 	fixedUpdate.push_back([&gameMan](float deltaTime) {gameMan->UpdateGameState(deltaTime); });
+	fixedUpdate.push_back([&statsTrack](float deltaTime) {statsTrack->TrackTime(deltaTime); });
 #pragma endregion
 
 #pragma region Bots
@@ -43,23 +46,31 @@ int main()
 	drawCall.push_back([&btnMan](sf::RenderWindow& window) { btnMan->DrawBtns(window); });
 
 	sf::Font font;
-	if (!font.loadFromFile("res/Mario-Kart-DS.ttf"))
+	if (!font.loadFromFile("res/poppins.ttf"))
 	{
 		std::cerr << "No Font" << std::endl;
 		return -1;
 	}
 
+	StatsRenderer* statsRend = new StatsRenderer(font, statsTrack);
+	drawCall.push_back([&statsRend](sf::RenderWindow& window) { statsRend->DrawStats(window); });
+
 	Bouton* Shuffle = new Bouton(150, 50, *new Vector2Int(0, 0), "Shuffle", font);
 	Shuffle->AddListeners([&gameMan]() {gameMan->GenerateGameParameters(); });
 	Shuffle->AddListeners([&traceRend]() {traceRend->RefreshTrace(); });
+	Shuffle->AddListeners([&statsTrack]() {statsTrack->RefreshStats(); });
 	btnMan->AddBtn(Shuffle);
 
 	Bouton* Start = new Bouton(150, 50, *new Vector2Int(0, 55), "Start", font);
 	Start->AddListeners([&gameMan]() {gameMan->StartGame(); });
+	Start->AddListeners([&statsTrack]() {statsTrack->StartCounter(); });
 	btnMan->AddBtn(Start);
 #pragma endregion
 
 	gameMan->GenerateGameParameters();
+
+	clock.restart();
+	float deltaTime = 0;
 	
 	while (window.isOpen())
 	{
@@ -70,9 +81,11 @@ int main()
 			inputs->ListenForInputs(event, window);
 		}
 
+		deltaTime = clock.restart().asSeconds();
+
 		for (auto& onFixedUpdate : fixedUpdate)
 		{
-			onFixedUpdate(clock.restart().asSeconds());
+			onFixedUpdate(deltaTime);
 		}
 
 		window.clear();

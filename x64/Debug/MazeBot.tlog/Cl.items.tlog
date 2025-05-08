@@ -10,5 +10,7 @@ C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\MazeBo
 C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\MazeGenerator.cpp;C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\x64\Debug\MazeGenerator.obj
 C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\MazeNode.cpp;C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\x64\Debug\MazeNode.obj
 C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\Pathfinder.cpp;C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\x64\Debug\Pathfinder.obj
+C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\StatsRenderer.cpp;C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\x64\Debug\StatsRenderer.obj
+C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\StatsTracker.cpp;C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\x64\Debug\StatsTracker.obj
 C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\TraceRenderer.cpp;C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\x64\Debug\TraceRenderer.obj
 C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\Vector2Int.cpp;C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\x64\Debug\Vector2Int.obj

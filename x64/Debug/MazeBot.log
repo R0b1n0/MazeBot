@@ -1,14 +1,2 @@
-﻿  GameManager.cpp
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,186): warning C4244: 'argument' : conversion de 'const int' en 'T', perte possible de données
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,186): warning C4244:         with
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,186): warning C4244:         [
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,186): warning C4244:             T=float
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,186): warning C4244:         ]
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,167): warning C4244: 'argument' : conversion de 'const int' en 'T', perte possible de données
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,167): warning C4244:         with
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,167): warning C4244:         [
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,167): warning C4244:             T=float
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(3,167): warning C4244:         ]
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(40,13): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
-C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\MazeBot\GameManager.cpp(41,13): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+﻿  StatsRenderer.cpp
   MazeBot.vcxproj -> C:\Users\robin\Desktop\Perso\Travail\ProjetsPerso\MazeBot\MazeBot\x64\Debug\MazeBot.exe

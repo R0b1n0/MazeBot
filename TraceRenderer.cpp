@@ -1,6 +1,6 @@
 #include "TraceRenderer.h"
 
-TraceRenderer::TraceRenderer(MazeGenerator& const maze, sf::Color color, sf::Color solutionColo) : m_maze(maze), m_explorationColor(color), m_solutionColor(solutionColo)
+TraceRenderer::TraceRenderer(MazeGenerator& const maze, sf::Color color, sf::Color solutionColo) : m_maze(maze), m_explorationColor(color), m_solutionColor(solutionColo), m_foundSolution(false)
 {
 	Pathfinder::OnTileDiscovery += [this](Vector2Int newVisited) { AddTrace(newVisited); };
 	Pathfinder::OnSolutionFound += [this](std::vector<Vector2Int> solution) {SaveSolution(solution); };
@@ -17,7 +17,6 @@ void TraceRenderer::DrawTrace(sf::RenderWindow& window)
 		DrawTileBatch(m_solution, m_solutionColor, window);
 	}
 }
-
 
 
 void TraceRenderer::SaveSolution(std::vector<Vector2Int> solution)
