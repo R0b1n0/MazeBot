@@ -12,7 +12,9 @@ public:
 	virtual void SetParameters(Vector2Int& start, Vector2Int& end);
 	virtual void NextSearchStep() = 0;
 	virtual const std::vector<Vector2Int*> GetVisitedTiles() = 0;
-	DelegateWrapper<std::function<void(int, int)>> test;
+
+	static DelegateWrapper<std::function<void(Vector2Int)>> OnTileDiscovery;
+	static DelegateWrapper<std::function<void(std::vector<Vector2Int>)>> OnSolutionFound;
 
 protected:
 	Vector2Int m_start;

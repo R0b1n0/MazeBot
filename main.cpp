@@ -13,21 +13,23 @@ int main()
 	sf::Clock clock;
 
 #pragma region Managers
-	MazeGenerator maze(m_winWidth, m_winHeight, 25);
+	MazeGenerator maze(m_winWidth, m_winHeight, 50);
 	GameManager* gameMan = new GameManager(maze);
-	BotRenderer* botRenderer = new BotRenderer(maze);
+	//BotRenderer* botRenderer = new BotRenderer(maze);
 	InputListener* inputs = new InputListener();
+	TraceRenderer* traceRend = new TraceRenderer(maze, sf::Color::Cyan, sf::Color::Magenta);
 
 	drawCall.push_back([&maze](sf::RenderWindow& window) { maze.DrawMaze(window); });
 	drawCall.push_back([&gameMan](sf::RenderWindow& window) { gameMan->DrawStartEnd(window); });
-	drawCall.push_back([&botRenderer](sf::RenderWindow& window) { botRenderer->RenderBots(window); });
+	//drawCall.push_back([&botRenderer](sf::RenderWindow& window) { botRenderer->RenderBots(window); });
+	drawCall.push_back([&traceRend](sf::RenderWindow& window) {traceRend->DrawTrace(window); });
 
 	fixedUpdate.push_back([&gameMan](float deltaTime) {gameMan->UpdateGameState(deltaTime); });
 #pragma endregion
 
 #pragma region Bots
-	MazeBot BfsBot("BFS Bot", sf::Color::Cyan);
-	botRenderer->AddBot(BfsBot);
+	MazeBot BfsBot("BFS Bot", sf::Color::Red);
+	//botRenderer->AddBot(BfsBot);
 #pragma endregion
 
 #pragma region Algo
@@ -49,6 +51,7 @@ int main()
 
 	Bouton* Shuffle = new Bouton(150, 50, *new Vector2Int(0, 0), "Shuffle", font);
 	Shuffle->AddListeners([&gameMan]() {gameMan->GenerateGameParameters(); });
+	Shuffle->AddListeners([&traceRend]() {traceRend->RefreshTrace(); });
 	btnMan->AddBtn(Shuffle);
 
 	Bouton* Start = new Bouton(150, 50, *new Vector2Int(0, 55), "Start", font);

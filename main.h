@@ -10,6 +10,7 @@
 #include "BtnManager.h"
 #include "GameManager.h"
 #include "BFSPathfinder.h"
+#include "TraceRenderer.h"
 
 
 

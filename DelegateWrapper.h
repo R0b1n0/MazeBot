@@ -3,14 +3,15 @@
 #include <functional>
 #include <utility>
 
-//TODO move into a new file 
 template <class T> class DelegateWrapper
 {
 private:
 	std::vector<T> methods;
 
 public:
-	template<typename... Args>
+	//Args est un template parameter pack (Args c'est juste un nom typique pour ce genre de variables)
+	//L'opérateur (...) déclare Args comme template parameter pack 
+	template<typename... Args> 
 	void Invoke(Args&&... args)
 	{
 		for (auto& method : methods)
@@ -19,8 +20,9 @@ public:
 		}
 	}
 
-	DelegateWrapper<T> operator += (T)
+	DelegateWrapper<T>& operator += (T method)
 	{
-		
+		methods.push_back(method);
+		return *this;
 	}
 };
