@@ -20,6 +20,8 @@ void GameManager::GenerateGameParameters()
 	{
 		(*it)->SetParameters(m_start, m_end);
 	}
+
+	m_running = false;
 }
 
 void GameManager::DrawStartEnd(sf::RenderWindow& window)
@@ -29,7 +31,7 @@ void GameManager::DrawStartEnd(sf::RenderWindow& window)
 	window.draw(m_pointShape);
 
 	m_pointShape.setPosition(CalculatePointRenderPos(m_end));
-	m_pointShape.setFillColor(sf::Color::Magenta);
+	m_pointShape.setFillColor(sf::Color::Red);
 	window.draw(m_pointShape);
 }
 

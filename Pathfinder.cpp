@@ -11,3 +11,6 @@ void Pathfinder::SetParameters(Vector2Int& start, Vector2Int& end)
 	m_end = end;
 	m_connectedBot->m_pos = start;
 }
+
+DelegateWrapper<std::function<void(Vector2Int)>> Pathfinder::OnTileDiscovery;
+DelegateWrapper<std::function<void(std::vector<Vector2Int>)>> Pathfinder::OnSolutionFound;
